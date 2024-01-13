@@ -2,9 +2,7 @@ plik = open('Dane_PR/liczby.txt').readlines()
 
 
 def nwd(a, b):
-    if b > 0:
-        return nwd(b, a % b)
-    return a
+    return nwd(b, a % b) if b > 0 else a
 
 
 liczby = []

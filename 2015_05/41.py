@@ -8,7 +8,7 @@ for wiersz in plik:
     for litera in wiersz:
         if litera == '0':
             ilosc_zer += 1
-        if litera == '1':
+        elif litera == '1':
             ilosc_jedynek += 1
     if ilosc_zer > ilosc_jedynek:
         ile_liczb += 1

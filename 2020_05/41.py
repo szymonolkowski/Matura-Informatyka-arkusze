@@ -2,12 +2,7 @@ plik = open('Dane_PR2/pary.txt').readlines()
 
 
 def isPrime(num):
-    if num <= 1:
-        return False
-    for i in range(2, num):
-        if num % i == 0:
-            return False
-    return True
+    return False if num <= 1 else all(num % i != 0 for i in range(2, num))
 
 
 print('Zadanie 4.1')

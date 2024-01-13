@@ -4,9 +4,7 @@ plik = open('Dane_PR/liczby.txt').readlines()
 def czyPotegaTrzy(num):
     while num % 3 == 0:
         num /= 3
-    if num == 1:
-        return True
-    return False
+    return num == 1
 
 
 ile = 0

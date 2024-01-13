@@ -17,10 +17,7 @@ def usun():
 def przesun(x):
     pos = haslo.index(x)
     liczba = ord(x)
-    if liczba == 90:
-        ascii = chr(65)
-    else:
-        ascii = chr(liczba+1)
+    ascii = chr(65) if liczba == 90 else chr(liczba+1)
     haslo[pos] = ascii
 
 
@@ -31,13 +28,13 @@ for wiersz in plik:
     litera = wiersz[1]
     if instrukcja == 'DOPISZ':
         dopisz(litera)
-    if instrukcja == 'ZMIEN':
-        zmien(litera)
-    if instrukcja == 'USUN':
-        usun()
-    if instrukcja == 'PRZESUN':
+    elif instrukcja == 'PRZESUN':
         przesun(litera)
 
+    elif instrukcja == 'USUN':
+        usun()
+    elif instrukcja == 'ZMIEN':
+        zmien(litera)
 haslo_cale = ''
 for i in haslo:
     haslo_cale = haslo_cale + i

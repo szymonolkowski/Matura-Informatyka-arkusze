@@ -28,11 +28,11 @@ for wiersz in plik:
     litera = wiersz[1]
     if instrukcja == 'DOPISZ':
         dopisz(litera)
-    if instrukcja == 'ZMIEN':
-        zmien(litera)
-    if instrukcja == 'USUN':
+    elif instrukcja == 'USUN':
         usun()
-    if instrukcja == 'przesun':
+    elif instrukcja == 'ZMIEN':
+        zmien(litera)
+    elif instrukcja == 'przesun':
         przesun(litera)
 
 print('Zadanie 4.1')

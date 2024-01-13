@@ -2,14 +2,10 @@ plik = open('MIN-R2A1P-193_dane/pierwsze.txt').readlines()
 
 
 def waga(x):
-    suma = 0
-    for i in str(x):
-        suma += int(i)
+    suma = sum(int(i) for i in str(x))
     while suma >= 10:
         suma_temp = suma
-        suma = 0
-        for i in str(suma_temp):
-            suma += int(i)
+        suma = sum(int(i) for i in str(suma_temp))
     return suma
 
 

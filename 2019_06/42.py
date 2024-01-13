@@ -2,10 +2,7 @@ plik = open('MIN-R2A1P-193_dane/pierwsze.txt').readlines()
 
 
 def isPrime(num):
-    for i in range(2, num):
-        if num % i == 0:
-            return False
-    return True
+    return all(num % i != 0 for i in range(2, num))
 
 
 print('Zadanie 4.2')

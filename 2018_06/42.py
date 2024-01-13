@@ -31,10 +31,13 @@ for wiersz in file2:
     parzyste_2.append(ilosc_parzyste)
     nieparzyste_2.append(ilosc_nieparzyste)
 
-ilosc = 0
-for i in range(len(parzyste_1)):
-    if parzyste_1[i] == 5 and parzyste_2[i] == 5 and nieparzyste_1[i] == 5 and nieparzyste_2[i] == 5:
-        ilosc += 1
-
+ilosc = sum(
+    1
+    for i in range(len(parzyste_1))
+    if parzyste_1[i] == 5
+    and parzyste_2[i] == 5
+    and nieparzyste_1[i] == 5
+    and nieparzyste_2[i] == 5
+)
 print('Zadanie 4.2')
 print(ilosc)
