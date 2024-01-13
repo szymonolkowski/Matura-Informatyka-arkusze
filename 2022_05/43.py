@@ -17,7 +17,7 @@ for i in range(0, len(liczby) - 1):
                 if k == j:
                     continue
                 z = liczby[k]
-                if y % x == 0 and z % y == 0:
+                if z % y == 0:
                     dobre_trojki.append([x, y, z])
 
 

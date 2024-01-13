@@ -14,10 +14,9 @@ maks_litera = ''
 for i in range(0, len(litery) - 1):
     if biezaca_litera == litery[i + 1]:
         liczba_wystapien += 1
-        biezaca_litera = litery[i + 1]
     else:
-        biezaca_litera = litery[i + 1]
         liczba_wystapien = 1
+    biezaca_litera = litery[i + 1]
     if liczba_wystapien > maks_liczba_wystapien:
         maks_liczba_wystapien = liczba_wystapien
         maks_litera = biezaca_litera

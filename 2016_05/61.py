@@ -3,14 +3,12 @@ plik = open('Dane_NOWA/dane_6_1.txt').readlines()
 
 def szyfruj(slowo, klucz):
     klucz = klucz % 26
-    zaszyfrowane = ''
-    for litera in slowo:
-        if ord(litera) + klucz > 90:
-            x = abs(90 - ord(litera) - klucz)
-            zaszyfrowane += chr(64 + x)
-        else:
-            zaszyfrowane += chr(ord(litera) + klucz)
-    return zaszyfrowane
+    return ''.join(
+        chr(64 + abs(90 - ord(litera) - klucz))
+        if ord(litera) + klucz > 90
+        else chr(ord(litera) + klucz)
+        for litera in slowo
+    )
 
 
 for wiersz in plik:

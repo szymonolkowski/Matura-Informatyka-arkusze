@@ -5,12 +5,8 @@ for wiersz in plik:
     wiersz = wiersz.strip().split()
     x = wiersz[0]
     y = wiersz[1]
-    set_x = set()
-    set_y = set()
-    for cyfra in x:
-        set_x.add(cyfra)
-    for cyfra in y:
-        set_y.add(cyfra)
+    set_x = set(x)
+    set_y = set(y)
     if set_x == set_y:
         ile += 1
 

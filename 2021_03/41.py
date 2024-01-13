@@ -12,5 +12,5 @@ for wiersz in plik:
     galerie[kraj] = galerie[kraj] + 1
 
 print('Zadanie 4.1')
-for x in galerie.keys():
+for x in galerie:
     print(x, galerie[x])
